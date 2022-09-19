@@ -71,13 +71,13 @@ void main(List<String> arguments) {
 
   //Deeply immutable
   const desserts = [
-    'Kashyap',
-    'JD',
+    'Darshit',
+    'JP',
     'Smit'
   ]; //This is same as , final desserts = const['Kashyap','JD','Smit'];
   // Below 3 will not work because list is const
   // desserts.add('Mirat');
-  // desserts.remove('Kashyap');
+  // desserts.remove('Darshit');
   // desserts[0] = 'abc';
   final modifiableList = [DateTime.now(), DateTime.now()];
   final unModifiableList = List.unmodifiable(modifiableList);
@@ -248,7 +248,7 @@ void main(List<String> arguments) {
   // Mini exercise:
   // Exercise 1
   Map<String, String> mySelf = {
-    'name': 'Kashyap',
+    'name': 'Darshit',
     'profession': 'Student',
     'country': 'India',
     'city': 'Valsad'
@@ -329,7 +329,7 @@ void main(List<String> arguments) {
   });
 
   // Challenge 3:
-  User user1 = User(1, 'Kashyap');
+  User user1 = User(1, 'Darshit');
   User user2 = User(2, 'JD');
   User user3 = User(3, 'Tiya');
   List<User> users = [user1, user2, user3];
