@@ -1,41 +1,35 @@
+
 import 'package:flutter/material.dart';
-import 'package:lab11_tut1/services/word_time.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
 
-class Loading extends StatefulWidget {
+
+class ChooseLocation extends StatefulWidget {
+
+// const ChooseLocation({Key? key}) : super(key: key);
+
   @override
-  State<Loading> createState() => _LoadingState();
+
+  State<ChooseLocation> createState() => _ChooseLocationState();
+
 }
-class _LoadingState extends State<Loading> {
 
-  void setWorldTime() async {
-    WorldTime timeinstance =
+class _ChooseLocationState extends State<ChooseLocation> {
 
-    WorldTime(location: 'kolkata',flag: 'india.png',url: 'Asia/Kolkata');
-    await timeinstance.getTime();
-    Navigator.pushNamed(context, '/home', arguments: {
-      'location': timeinstance.location,
-      'flag' : timeinstance.flag,
-      'time' : timeinstance.time,
-    });
-
-  }
-  @override
-  void initState() {
-    super.initState();
-    setWorldTime();
-  }
+  int counter = 0;
 
   @override
   Widget build(BuildContext context) {
+    print('Build Function Run in Choose Location...');
     return Scaffold(
-        backgroundColor: Colors.deepPurpleAccent,
-        body: Center(
-             child: SpinKitFadingFour(
-                color: Colors.white,
-                size: 90.0,
-              )
-          )
+
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        backgroundColor: Colors.green,
+        title: Text("CHOOSE LOCATION"),
+        centerTitle: true,
+        elevation: 0,
+      ),
+
+
 
     );
   }
